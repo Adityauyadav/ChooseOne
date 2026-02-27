@@ -51,7 +51,8 @@ function App() {
         audioRef.current.currentTime = 0;
       }
 
-      const isOption1 = Math.random() > 0.5;
+      const chooseRandom = Math.floor(Math.random()*10);
+      const isOption1 = (chooseRandom%2==0);
       const chosen = isOption1 ? option1 : option2;
       setWinner(chosen);
       setWinnerIndex(isOption1 ? 1 : 2);
